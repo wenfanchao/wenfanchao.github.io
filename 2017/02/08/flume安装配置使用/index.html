@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="hexo,githubpage," />
+  <meta name="keywords" content="flume,bigdata,大数据," />
 
 
 
@@ -84,16 +84,18 @@
 
 
 
-<meta name="description" content="最近终于用hexo+githubpage把个人博客建立了，中间遇到不少的坑，记下来省的再犯。">
+<meta name="description" content="FLUME介绍flume是一个分布式的，可靠的，可用的服务，有效地收集，汇总和移动大量的日志数据。它有一个简单的和灵活的架构基于流数据流。具有很好的健壮性和容错性具有可调性可靠性机制和多故障转移和恢复机制。它使用一个简单的可扩展数据模型，允许联机分析应用程序。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo+githubpage安装配置">
-<meta property="og:url" content="http://wenfanchao.win/2017/02/03/hexo+github安装配置/index.html">
+<meta property="og:title" content="flume安装配置使用">
+<meta property="og:url" content="http://wenfanchao.win/2017/02/08/flume安装配置使用/index.html">
 <meta property="og:site_name" content="温凡超的blog">
-<meta property="og:description" content="最近终于用hexo+githubpage把个人博客建立了，中间遇到不少的坑，记下来省的再犯。">
-<meta property="og:updated_time" content="2017-02-06T01:19:33.767Z">
+<meta property="og:description" content="FLUME介绍flume是一个分布式的，可靠的，可用的服务，有效地收集，汇总和移动大量的日志数据。它有一个简单的和灵活的架构基于流数据流。具有很好的健壮性和容错性具有可调性可靠性机制和多故障转移和恢复机制。它使用一个简单的可扩展数据模型，允许联机分析应用程序。">
+<meta property="og:image" content="https://flume.apache.org/_images/DevGuide_image00.png">
+<meta property="og:updated_time" content="2017-02-08T02:05:30.269Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo+githubpage安装配置">
-<meta name="twitter:description" content="最近终于用hexo+githubpage把个人博客建立了，中间遇到不少的坑，记下来省的再犯。">
+<meta name="twitter:title" content="flume安装配置使用">
+<meta name="twitter:description" content="FLUME介绍flume是一个分布式的，可靠的，可用的服务，有效地收集，汇总和移动大量的日志数据。它有一个简单的和灵活的架构基于流数据流。具有很好的健壮性和容错性具有可调性可靠性机制和多故障转移和恢复机制。它使用一个简单的可扩展数据模型，允许联机分析应用程序。">
+<meta name="twitter:image" content="https://flume.apache.org/_images/DevGuide_image00.png">
 
 
 
@@ -121,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://wenfanchao.win/2017/02/03/hexo+github安装配置/"/>
+  <link rel="canonical" href="http://wenfanchao.win/2017/02/08/flume安装配置使用/"/>
 
 
 
 
 
-  <title> hexo+githubpage安装配置 | 温凡超的blog </title>
+  <title> flume安装配置使用 | 温凡超的blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -283,7 +285,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://wenfanchao.win/2017/02/03/hexo+github安装配置/">
+  <link itemprop="mainEntityOfPage" href="http://wenfanchao.win/2017/02/08/flume安装配置使用/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Wen fanchao">
@@ -307,7 +309,7 @@
             
             
               
-                hexo+githubpage安装配置
+                flume安装配置使用
               
             
           </h1>
@@ -322,8 +324,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-03T00:00:00+08:00">
-                2017-02-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-08T08:41:31+08:00">
+                2017-02-08
               </time>
             
 
@@ -363,8 +365,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/03/hexo+github安装配置/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/03/hexo+github安装配置/" itemprop="commentCount"></span>
+                <a href="/2017/02/08/flume安装配置使用/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/08/flume安装配置使用/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -390,21 +392,30 @@
       
 
       
-        <p>最近终于用hexo+githubpage把个人博客建立了，中间遇到不少的坑，记下来省的再犯。<br><a id="more"></a></p>
-<h2 id="githubpage"><a href="#githubpage" class="headerlink" title="githubpage"></a>githubpage</h2><h3 id="githubpage真的是个好项目，为我们广大屌丝解决了很多问题"><a href="#githubpage真的是个好项目，为我们广大屌丝解决了很多问题" class="headerlink" title="githubpage真的是个好项目，为我们广大屌丝解决了很多问题"></a>githubpage真的是个好项目，为我们广大屌丝解决了很多问题</h3><p>具体的不想详细介绍不管是度娘还是谷哥都是一大堆。就给个地址: <strong><a href="https://pages.github.com" target="_blank" rel="external">githubpage</a></strong></p>
-<h2 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h2><h3 id="hexo也没啥说的官网巨详细基本就是照着做就可以"><a href="#hexo也没啥说的官网巨详细基本就是照着做就可以" class="headerlink" title="hexo也没啥说的官网巨详细基本就是照着做就可以"></a>hexo也没啥说的官网巨详细基本就是照着做就可以</h3><p>地址:<br><strong><a href="https://hexo.io" target="_blank" rel="external">hexo</a></strong></p>
-<h3 id="themes"><a href="#themes" class="headerlink" title="themes"></a>themes</h3><p>hexo的社区很活跃提供的样式也很多这里选择了 <strong><a href="http://theme-next.iissnan.com" target="_blank" rel="external">next</a></strong> 这个被加星最多的样式，感觉还是很不错的该有的功能一应俱全</p>
-<h4 id="next"><a href="#next" class="headerlink" title="next"></a>next</h4><p>next 主题功能全面，这里我只把个人修改的地方做个介绍</p>
-<ol>
-<li>我修改了主题里的footer模板，原因是我对HEXO强力驱动和next主题支持这个标签实在是无爱了<br><br>footer模板位置：themes\next\layout_partials\footer.swig<br><br>模板很容易看懂，修改自己需要的内容就可以了。<br><br>ps:注意里面变量的值是从你设置的对应语言的YML中获取的，我设置的简体中文。文件位置在themes/next/languages/zh-Hans.yml</li>
-<li>next的标签页面我不太喜欢，或者说是hexo的tagcloud样子我觉得都不是太爱。所以修改了样式，参考了<a href="http://wzpan.github.io/hexo-theme-freemind/" target="_blank" rel="external">freemind</a>的标签样式</li>
-<li><p>修改模板 themes\next\page.swig <br><br>替换了原有的标签生成修改为自定的 div与样式</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"posts"</span> <span class="attr">class</span>=<span class="string">"posts-expand"</span>&gt;</span></div><div class="line">&#123;% include '_partials/page-header.swig' %&#125;</div><div class="line">  &#123;# tagcloud page support #&#125;</div><div class="line">  &#123;% if page.type === "tags" %&#125;</div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tag-cloud"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tag-cloud-title"</span>&gt;</span></div><div class="line">          &#123;&#123; _p('counter.tag_cloud', site.tags.length) &#125;&#125;</div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"widget"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"tag_box inline list-unstyled"</span>&gt;</span></div><div class="line">        &#123;% for item in site.tags %&#125;</div><div class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&#123;&#123;config.root&#125;&#125;&#123;&#123;item.path&#125;&#125;"</span>&gt;</span>&#123;&#123;item.name&#125;&#125;<span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123;item.posts.length&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">        &#123;% endfor %&#125;</div><div class="line">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+        <h2 id="FLUME介绍"><a href="#FLUME介绍" class="headerlink" title="FLUME介绍"></a>FLUME介绍</h2><p><a href="https://flume.apache.org" target="_blank" rel="external">flume</a>是一个分布式的，可靠的，可用的服务，有效地收集，汇总和移动大量的日志数据。它有一个简单的和灵活的架构基于流数据流。具有很好的健壮性和容错性具有可调性可靠性机制和多故障转移和恢复机制。它使用一个简单的可扩展数据模型，允许联机分析应用程序。<br><img src="https://flume.apache.org/_images/DevGuide_image00.png" alt="flume"><br><a id="more"></a></p>
+<h2 id="flume下载"><a href="#flume下载" class="headerlink" title="flume下载"></a>flume下载</h2><p>flume直接在官网提供最新版本<a href="https://flume.apache.org/download.html" target="_blank" rel="external">下载</a>，同时也提供了历史版本<a href="http://archive.apache.org/dist/flume/" target="_blank" rel="external">下载</a></p>
+<h2 id="flume安装"><a href="#flume安装" class="headerlink" title="flume安装"></a>flume安装</h2><ul>
+<li><p>下载flume后直接解压到文件夹</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ tar -zxvf apache-flume-1.7.0-bin.tar.gz -C usr/hadoop/</div></pre></td></tr></table></figure>
 </li>
-<li><p>修改样式 themes\next\source\css_common\components\post\post-tags.styl<br>中增加</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.widget</span> &#123;</div><div class="line">  <span class="attribute">padding-bottom</span>: <span class="number">25px</span>;</div><div class="line">  <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#e0e0e0</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.tag_box</span> &#123;</div><div class="line">  <span class="attribute">margin</span>:<span class="number">0</span>;</div><div class="line">  <span class="attribute">overflow</span>:hidden;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.tag_box</span> <span class="selector-tag">li</span> &#123;</div><div class="line">  <span class="attribute">line-height</span>:<span class="number">28px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.tag_box</span> <span class="selector-tag">li</span> <span class="selector-tag">i</span> &#123;</div><div class="line">  <span class="attribute">opacity</span>:<span class="number">0.9</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.tag_box</span><span class="selector-class">.inline</span> <span class="selector-tag">li</span> &#123;</div><div class="line">  <span class="attribute">float</span>:left;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.tag_box</span> <span class="selector-tag">a</span> &#123;</div><div class="line">  <span class="attribute">padding</span>: <span class="number">2px</span> <span class="number">6px</span>;</div><div class="line">  <span class="attribute">margin</span>: <span class="number">2px</span>;</div><div class="line">  <span class="attribute">background</span>: <span class="number">#e5e5e5</span>;</div><div class="line">  <span class="attribute">color</span>:<span class="number">#555</span>;</div><div class="line">  <span class="attribute">border-radius</span>: <span class="number">3px</span>;</div><div class="line">  <span class="attribute">text-decoration</span>:none;</div><div class="line">  <span class="attribute">border</span>:<span class="number">1px</span> dashed <span class="number">#bbb</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.tag_box</span> <span class="selector-tag">a</span> <span class="selector-tag">span</span>&#123;</div><div class="line">  <span class="attribute">vertical-align</span>:super;</div><div class="line">  <span class="attribute">font-size</span>:<span class="number">0.8em</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.tag_box</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</div><div class="line">  <span class="attribute">background-color</span>:<span class="number">#397bdd</span>;</div><div class="line">  <span class="attribute">color</span>:<span class="number">#FFF</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.tag_box</span> <span class="selector-tag">a</span><span class="selector-class">.active</span> &#123;</div><div class="line">  <span class="attribute">background</span>:<span class="number">#57A957</span>;</div><div class="line">  <span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#4C964D</span>;</div><div class="line">  <span class="attribute">color</span>:<span class="number">#FFF</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li><p>修改配置文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">flume-env.ps1.template flume-env.ps1.sh</div></pre></td></tr></table></figure>
 </li>
-</ol>
+<li><p>修改文件内容</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> JAVA_HOME=/usr/java/jdk1.8.0_111</div><div class="line">FLUME_CLASSPATH=<span class="string">"<span class="variable">$HADOOP_HOME</span>/share/hadoop/common/hadoop-common-2.6.0.jar"</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>修改profile文件增加flume</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> FLUME_HOME=/etc/hadoop/apache-flume-1.7.0-bin</div><div class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$JAVA_HOME</span>/bin:<span class="variable">$HADOOP_HOME</span>/bin:<span class="variable">$HADOOP_HOME</span>/sbin:<span class="variable">$FLUME_HOME</span>/bin</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="fulme使用"><a href="#fulme使用" class="headerlink" title="fulme使用"></a>fulme使用</h2><ul>
+<li><p>监听一个文件夹有新文件进入后导入到HDFS中</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Licensed to the Apache Software Foundation (ASF) under one</span></div><div class="line"><span class="comment"># or more contributor license agreements.  See the NOTICE file</span></div><div class="line"><span class="comment"># distributed with this work for additional information</span></div><div class="line"><span class="comment"># regarding copyright ownership.  The ASF licenses this file</span></div><div class="line"><span class="comment"># to you under the Apache License, Version 2.0 (the</span></div><div class="line"><span class="comment"># "License"); you may not use this file except in compliance</span></div><div class="line"><span class="comment"># with the License.  You may obtain a copy of the License at</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment">#  http://www.apache.org/licenses/LICENSE-2.0</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment"># Unless required by applicable law or agreed to in writing,</span></div><div class="line"><span class="comment"># software distributed under the License is distributed on an</span></div><div class="line"><span class="comment"># "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</span></div><div class="line"><span class="comment"># KIND, either express or implied.  See the License for the</span></div><div class="line"><span class="comment"># specific language governing permissions and limitations</span></div><div class="line"><span class="comment"># under the License.</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># The configuration file needs to define the sources,</span></div><div class="line"><span class="comment"># the channels and the sinks.</span></div><div class="line"><span class="comment"># Sources, channels and sinks are defined per agent,</span></div><div class="line"><span class="comment"># in this case called 'agent'</span></div><div class="line"></div><div class="line"><span class="attribute">logAgent</span>.sources = logSource</div><div class="line"><span class="attribute">logAgent</span>.channels = fileChannel</div><div class="line"><span class="attribute">logAgent</span>.sinks = hdfsSink</div><div class="line"></div><div class="line"><span class="comment"># For each one of the sources, the type is defined</span></div><div class="line"><span class="attribute">logAgent</span>.sources.logSource.type = spooldir</div><div class="line"><span class="comment">#监听的文件夹</span></div><div class="line"><span class="attribute">logAgent</span>.sources.logSource.spoolDir = /root/bigdata/datasource</div><div class="line"><span class="attribute">logAgent</span>.sources.logSource.basenameHeader = true</div><div class="line"><span class="attribute">logAgent</span>.sources.logSource.basenameHeaderKey = basename</div><div class="line"></div><div class="line"><span class="comment"># The channel can be defined as follows.</span></div><div class="line"><span class="attribute">logAgent</span>.sources.logSource.channels = fileChannel</div><div class="line"></div><div class="line"><span class="comment"># Each sink's type must be defined</span></div><div class="line"><span class="attribute">logAgent</span>.sinks.hdfsSink.type = hdfs</div><div class="line"><span class="comment">#导入HDFS的位置</span></div><div class="line"><span class="attribute">logAgent</span>.sinks.hdfsSink.hdfs.path = hdfs://hadoop:9000/flume/weather</div><div class="line"><span class="attribute">logAgent</span>.sinks.hdfsSink.hdfs.filePrefix= <span class="variable">%&#123;basename&#125;</span></div><div class="line"><span class="attribute">logAgent</span>.sinks.hdfsSink.hdfs.rollInterval= 600</div><div class="line"><span class="attribute">logAgent</span>.sinks.hdfsSink.hdfs.rollCount= 10000</div><div class="line"><span class="attribute">logAgent</span>.sinks.hdfsSink.hdfs.rollSize= 0</div><div class="line"><span class="attribute">logAgent</span>.sinks.hdfsSink.hdfs.round = true</div><div class="line"><span class="attribute">logAgent</span>.sinks.hdfsSink.hdfs.roundValue = 1</div><div class="line"><span class="attribute">logAgent</span>.sinks.hdfsSink.hdfs.roundUnit = minute</div><div class="line"><span class="attribute">logAgent</span>.sinks.hdfsSink.hdfs.fileType = DataStream</div><div class="line"><span class="attribute">logAgent</span>.sinks.hdfsSink.hdfs.useLocalTimeStamp = true</div><div class="line"><span class="comment">#Specify the channel the sink should use</span></div><div class="line"><span class="attribute">logAgent</span>.sinks.hdfsSink.channel = fileChannel</div><div class="line"></div><div class="line"><span class="comment"># Each channel's type is defined.</span></div><div class="line"><span class="attribute">logAgent</span>.channels.fileChannel.type = file</div><div class="line"><span class="attribute">logAgent</span>.channels.fileChannel.checkpointDir= /etc/hadoop/apache-flume-1.7.0-bin/dataCheckpointDir</div><div class="line"><span class="attribute">logAgent</span>.channels.fileChannel.dataDirs= /etc/hadoop/apache-flume-1.7.0-bin/dataDir</div><div class="line"></div><div class="line"><span class="comment"># Other config values specific to each type of channel(sink or source)</span></div><div class="line"><span class="comment"># can be defined as well</span></div><div class="line"><span class="comment"># In this case, it specifies the capacity of the memory channel</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>启动脚本</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">flume-ng agent --conf /etc/hadoop/apache-flume-1.7.0-bin/conf/ --conf-file /etc/hadoop/apache-flume-1.7.0-bin/conf/flume-conf-weather.properties --name <span class="built_in">log</span>Agent -Dflume.root.logger=DEBUG,console -Dflume.monitoring.type=http -Dflume.monitoring.port=34545</div></pre></td></tr></table></figure>
+</li>
+</ul>
 
       
     </div>
@@ -428,9 +439,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag"># hexo</a>
+            <a href="/tags/flume/" rel="tag"># flume</a>
           
-            <a href="/tags/githubpage/" rel="tag"># githubpage</a>
+            <a href="/tags/bigdata/" rel="tag"># bigdata</a>
+          
+            <a href="/tags/大数据/" rel="tag"># 大数据</a>
           
         </div>
       
@@ -439,8 +452,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/03/CNAME配置/" rel="next" title="github CNAME 设置">
-                <i class="fa fa-chevron-left"></i> github CNAME 设置
+              <a href="/2017/02/07/sqoop安装配置使用/" rel="next" title="sqoop安装配置使用">
+                <i class="fa fa-chevron-left"></i> sqoop安装配置使用
               </a>
             
           </div>
@@ -449,8 +462,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/02/06/ShadowSocks（影梭）/" rel="prev" title="ShadowSocks（影梭）">
-                ShadowSocks（影梭） <i class="fa fa-chevron-right"></i>
+              <a href="/2017/02/08/hive安装配置使用/" rel="prev" title="hive安装配置使用">
+                hive安装配置使用 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -477,8 +490,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/03/hexo+github安装配置/"
-           data-title="hexo+githubpage安装配置" data-url="http://wenfanchao.win/2017/02/03/hexo+github安装配置/">
+      <div class="ds-thread" data-thread-key="2017/02/08/flume安装配置使用/"
+           data-title="flume安装配置使用" data-url="http://wenfanchao.win/2017/02/08/flume安装配置使用/">
       </div>
     
   </div>
@@ -609,7 +622,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#githubpage"><span class="nav-number">1.</span> <span class="nav-text">githubpage</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#githubpage真的是个好项目，为我们广大屌丝解决了很多问题"><span class="nav-number">1.1.</span> <span class="nav-text">githubpage真的是个好项目，为我们广大屌丝解决了很多问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo"><span class="nav-number">2.</span> <span class="nav-text">hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo也没啥说的官网巨详细基本就是照着做就可以"><span class="nav-number">2.1.</span> <span class="nav-text">hexo也没啥说的官网巨详细基本就是照着做就可以</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#themes"><span class="nav-number">2.2.</span> <span class="nav-text">themes</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#next"><span class="nav-number">2.2.1.</span> <span class="nav-text">next</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#FLUME介绍"><span class="nav-number">1.</span> <span class="nav-text">FLUME介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#flume下载"><span class="nav-number">2.</span> <span class="nav-text">flume下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#flume安装"><span class="nav-number">3.</span> <span class="nav-text">flume安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fulme使用"><span class="nav-number">4.</span> <span class="nav-text">fulme使用</span></a></li></ol></div>
             
 
           </div>

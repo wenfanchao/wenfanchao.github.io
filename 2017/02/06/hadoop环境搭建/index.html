@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="hexo,githubpage," />
+  <meta name="keywords" content="hadoop,bigdata,大数据," />
 
 
 
@@ -84,16 +84,58 @@
 
 
 
-<meta name="description" content="最近终于用hexo+githubpage把个人博客建立了，中间遇到不少的坑，记下来省的再犯。">
+<meta name="description" content="前一阵子弄了1个多月的hadoop环境，基本把环境安装了并且能够进行简单的数据分析，有时间了把其中的问题记录下来对以后有帮助
+前言环境准备因为在windows上进行的研究，全程使用VMware虚拟机，会专门写篇文章将VMware虚拟这里不详细介绍了。安装的CentOS6.5系统，用到的软件有
+
+
+
+名称
+版本
+地址
+
+
+
+
+hadoop
+2.6.0
+http://apache.fayea.com/">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo+githubpage安装配置">
-<meta property="og:url" content="http://wenfanchao.win/2017/02/03/hexo+github安装配置/index.html">
+<meta property="og:title" content="hadoop环境搭建">
+<meta property="og:url" content="http://wenfanchao.win/2017/02/06/hadoop环境搭建/index.html">
 <meta property="og:site_name" content="温凡超的blog">
-<meta property="og:description" content="最近终于用hexo+githubpage把个人博客建立了，中间遇到不少的坑，记下来省的再犯。">
-<meta property="og:updated_time" content="2017-02-06T01:19:33.767Z">
+<meta property="og:description" content="前一阵子弄了1个多月的hadoop环境，基本把环境安装了并且能够进行简单的数据分析，有时间了把其中的问题记录下来对以后有帮助
+前言环境准备因为在windows上进行的研究，全程使用VMware虚拟机，会专门写篇文章将VMware虚拟这里不详细介绍了。安装的CentOS6.5系统，用到的软件有
+
+
+
+名称
+版本
+地址
+
+
+
+
+hadoop
+2.6.0
+http://apache.fayea.com/">
+<meta property="og:updated_time" content="2017-02-07T01:29:56.295Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo+githubpage安装配置">
-<meta name="twitter:description" content="最近终于用hexo+githubpage把个人博客建立了，中间遇到不少的坑，记下来省的再犯。">
+<meta name="twitter:title" content="hadoop环境搭建">
+<meta name="twitter:description" content="前一阵子弄了1个多月的hadoop环境，基本把环境安装了并且能够进行简单的数据分析，有时间了把其中的问题记录下来对以后有帮助
+前言环境准备因为在windows上进行的研究，全程使用VMware虚拟机，会专门写篇文章将VMware虚拟这里不详细介绍了。安装的CentOS6.5系统，用到的软件有
+
+
+
+名称
+版本
+地址
+
+
+
+
+hadoop
+2.6.0
+http://apache.fayea.com/">
 
 
 
@@ -121,13 +163,13 @@
 
 
 
-  <link rel="canonical" href="http://wenfanchao.win/2017/02/03/hexo+github安装配置/"/>
+  <link rel="canonical" href="http://wenfanchao.win/2017/02/06/hadoop环境搭建/"/>
 
 
 
 
 
-  <title> hexo+githubpage安装配置 | 温凡超的blog </title>
+  <title> hadoop环境搭建 | 温凡超的blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -283,7 +325,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://wenfanchao.win/2017/02/03/hexo+github安装配置/">
+  <link itemprop="mainEntityOfPage" href="http://wenfanchao.win/2017/02/06/hadoop环境搭建/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Wen fanchao">
@@ -307,7 +349,7 @@
             
             
               
-                hexo+githubpage安装配置
+                hadoop环境搭建
               
             
           </h1>
@@ -322,8 +364,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-03T00:00:00+08:00">
-                2017-02-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-06T00:00:00+08:00">
+                2017-02-06
               </time>
             
 
@@ -363,8 +405,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/03/hexo+github安装配置/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/03/hexo+github安装配置/" itemprop="commentCount"></span>
+                <a href="/2017/02/06/hadoop环境搭建/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/06/hadoop环境搭建/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -390,19 +432,64 @@
       
 
       
-        <p>最近终于用hexo+githubpage把个人博客建立了，中间遇到不少的坑，记下来省的再犯。<br><a id="more"></a></p>
-<h2 id="githubpage"><a href="#githubpage" class="headerlink" title="githubpage"></a>githubpage</h2><h3 id="githubpage真的是个好项目，为我们广大屌丝解决了很多问题"><a href="#githubpage真的是个好项目，为我们广大屌丝解决了很多问题" class="headerlink" title="githubpage真的是个好项目，为我们广大屌丝解决了很多问题"></a>githubpage真的是个好项目，为我们广大屌丝解决了很多问题</h3><p>具体的不想详细介绍不管是度娘还是谷哥都是一大堆。就给个地址: <strong><a href="https://pages.github.com" target="_blank" rel="external">githubpage</a></strong></p>
-<h2 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h2><h3 id="hexo也没啥说的官网巨详细基本就是照着做就可以"><a href="#hexo也没啥说的官网巨详细基本就是照着做就可以" class="headerlink" title="hexo也没啥说的官网巨详细基本就是照着做就可以"></a>hexo也没啥说的官网巨详细基本就是照着做就可以</h3><p>地址:<br><strong><a href="https://hexo.io" target="_blank" rel="external">hexo</a></strong></p>
-<h3 id="themes"><a href="#themes" class="headerlink" title="themes"></a>themes</h3><p>hexo的社区很活跃提供的样式也很多这里选择了 <strong><a href="http://theme-next.iissnan.com" target="_blank" rel="external">next</a></strong> 这个被加星最多的样式，感觉还是很不错的该有的功能一应俱全</p>
-<h4 id="next"><a href="#next" class="headerlink" title="next"></a>next</h4><p>next 主题功能全面，这里我只把个人修改的地方做个介绍</p>
-<ol>
-<li>我修改了主题里的footer模板，原因是我对HEXO强力驱动和next主题支持这个标签实在是无爱了<br><br>footer模板位置：themes\next\layout_partials\footer.swig<br><br>模板很容易看懂，修改自己需要的内容就可以了。<br><br>ps:注意里面变量的值是从你设置的对应语言的YML中获取的，我设置的简体中文。文件位置在themes/next/languages/zh-Hans.yml</li>
-<li>next的标签页面我不太喜欢，或者说是hexo的tagcloud样子我觉得都不是太爱。所以修改了样式，参考了<a href="http://wzpan.github.io/hexo-theme-freemind/" target="_blank" rel="external">freemind</a>的标签样式</li>
-<li><p>修改模板 themes\next\page.swig <br><br>替换了原有的标签生成修改为自定的 div与样式</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"posts"</span> <span class="attr">class</span>=<span class="string">"posts-expand"</span>&gt;</span></div><div class="line">&#123;% include '_partials/page-header.swig' %&#125;</div><div class="line">  &#123;# tagcloud page support #&#125;</div><div class="line">  &#123;% if page.type === "tags" %&#125;</div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tag-cloud"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tag-cloud-title"</span>&gt;</span></div><div class="line">          &#123;&#123; _p('counter.tag_cloud', site.tags.length) &#125;&#125;</div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"widget"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"tag_box inline list-unstyled"</span>&gt;</span></div><div class="line">        &#123;% for item in site.tags %&#125;</div><div class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&#123;&#123;config.root&#125;&#125;&#123;&#123;item.path&#125;&#125;"</span>&gt;</span>&#123;&#123;item.name&#125;&#125;<span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123;item.posts.length&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">        &#123;% endfor %&#125;</div><div class="line">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+        <p>前一阵子弄了1个多月的hadoop环境，基本把环境安装了并且能够进行简单的数据分析，有时间了把其中的问题记录下来对以后有帮助</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><p>因为在windows上进行的研究，全程使用VMware虚拟机，会专门写篇文章将VMware虚拟这里不详细介绍了。<br><br>安装的CentOS6.5系统，用到的软件有</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>版本</th>
+<th>地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hadoop</td>
+<td>2.6.0</td>
+<td><a href="http://apache.fayea.com/hadoop/common/hadoop-2.6.0/hadoop-2.6.0.tar.gz" target="_blank" rel="external">http://apache.fayea.com/hadoop/common/hadoop-2.6.0/hadoop-2.6.0.tar.gz</a></td>
+</tr>
+<tr>
+<td>sqoop</td>
+<td>1.4.6</td>
+<td><a href="http://mirror.bit.edu.cn/apache/sqoop/1.4.6/sqoop-1.4.6.bin__hadoop-2.0.4-alpha.tar.gz" target="_blank" rel="external">http://mirror.bit.edu.cn/apache/sqoop/1.4.6/sqoop-1.4.6.bin__hadoop-2.0.4-alpha.tar.gz</a></td>
+</tr>
+<tr>
+<td>flume</td>
+<td>1.7.0</td>
+<td><a href="http://mirrors.hust.edu.cn/apache/flume/1.7.0/apache-flume-1.7.0-bin.tar.gz" target="_blank" rel="external">http://mirrors.hust.edu.cn/apache/flume/1.7.0/apache-flume-1.7.0-bin.tar.gz</a></td>
+</tr>
+<tr>
+<td>hive</td>
+<td>2.1.0</td>
+<td><a href="http://mirror.bit.edu.cn/apache/hive/stable-2/apache-hive-2.1.0-bin.tar.gz" target="_blank" rel="external">http://mirror.bit.edu.cn/apache/hive/stable-2/apache-hive-2.1.0-bin.tar.gz</a></td>
+</tr>
+<tr>
+<td>presto</td>
+<td>0.157</td>
+<td><a href="https://repo1.maven.org/maven2/com/facebook/presto/presto-server/0.157/presto-server-0.157.tar.gz" target="_blank" rel="external">https://repo1.maven.org/maven2/com/facebook/presto/presto-server/0.157/presto-server-0.157.tar.gz</a></td>
+</tr>
+<tr>
+<td>presto-cli</td>
+<td>0.157</td>
+<td><a href="https://repo1.maven.org/maven2/com/facebook/presto/presto-cli/0.157/presto-cli-0.157-executable.jar" target="_blank" rel="external">https://repo1.maven.org/maven2/com/facebook/presto/presto-cli/0.157/presto-cli-0.157-executable.jar</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><blockquote>
+<p>ps:推荐最高就用2.6.0的环境了，因为官方给的windows调试版本就是2.6.0，在高的版本没有 winutil.exe 与 hadoop.dll 这2个文件<br>在后续的开发中，无法再windows端进行调试。</p>
+</blockquote>
+<h3 id="伪分布式环境搭建"><a href="#伪分布式环境搭建" class="headerlink" title="伪分布式环境搭建"></a>伪分布式环境搭建</h3><ol>
+<li>hadoop使用JAVA开发，所以需要的最基本环境就是JAVA这里不加怎样安装java了，给一篇自己写的centos6.5安装java的帖子</li>
+<li><p>下载hadoop 將下载好的hadoop2.6.0上传到/usr/hadoop 解压</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar -zxvf hadoop-2.6.0.tar.gz</div></pre></td></tr></table></figure>
 </li>
-<li><p>修改样式 themes\next\source\css_common\components\post\post-tags.styl<br>中增加</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.widget</span> &#123;</div><div class="line">  <span class="attribute">padding-bottom</span>: <span class="number">25px</span>;</div><div class="line">  <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#e0e0e0</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.tag_box</span> &#123;</div><div class="line">  <span class="attribute">margin</span>:<span class="number">0</span>;</div><div class="line">  <span class="attribute">overflow</span>:hidden;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.tag_box</span> <span class="selector-tag">li</span> &#123;</div><div class="line">  <span class="attribute">line-height</span>:<span class="number">28px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.tag_box</span> <span class="selector-tag">li</span> <span class="selector-tag">i</span> &#123;</div><div class="line">  <span class="attribute">opacity</span>:<span class="number">0.9</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.tag_box</span><span class="selector-class">.inline</span> <span class="selector-tag">li</span> &#123;</div><div class="line">  <span class="attribute">float</span>:left;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.tag_box</span> <span class="selector-tag">a</span> &#123;</div><div class="line">  <span class="attribute">padding</span>: <span class="number">2px</span> <span class="number">6px</span>;</div><div class="line">  <span class="attribute">margin</span>: <span class="number">2px</span>;</div><div class="line">  <span class="attribute">background</span>: <span class="number">#e5e5e5</span>;</div><div class="line">  <span class="attribute">color</span>:<span class="number">#555</span>;</div><div class="line">  <span class="attribute">border-radius</span>: <span class="number">3px</span>;</div><div class="line">  <span class="attribute">text-decoration</span>:none;</div><div class="line">  <span class="attribute">border</span>:<span class="number">1px</span> dashed <span class="number">#bbb</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.tag_box</span> <span class="selector-tag">a</span> <span class="selector-tag">span</span>&#123;</div><div class="line">  <span class="attribute">vertical-align</span>:super;</div><div class="line">  <span class="attribute">font-size</span>:<span class="number">0.8em</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.tag_box</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</div><div class="line">  <span class="attribute">background-color</span>:<span class="number">#397bdd</span>;</div><div class="line">  <span class="attribute">color</span>:<span class="number">#FFF</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.tag_box</span> <span class="selector-tag">a</span><span class="selector-class">.active</span> &#123;</div><div class="line">  <span class="attribute">background</span>:<span class="number">#57A957</span>;</div><div class="line">  <span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#4C964D</span>;</div><div class="line">  <span class="attribute">color</span>:<span class="number">#FFF</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li><p>修改 /usr/hadoop/hadoop2.6.0/etc/hadoop下的5个配置文件，分别为<br><code>core-site.xml</code>,<code>hdfs-site.xml</code>,<code>hadoop-env.sh</code>,<code>mapred-site.xml</code>,<code>yarn-site.xml</code></p>
+</li>
+<li><p>core-site.xml 增加内容</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">  <span class="comment">&lt;!-- 制定HDFS（NameNode）的地址 --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">property</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>fs.defaultFS<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>hdfs://hadoop:9000<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">property</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">property</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 指定hadoop运行时产生文件的存储目录 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>hadoop.tmp.dir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>/usr/hadoop-2.6.0/tmp<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">property</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 配置当前用户，我这里是root为所有用户和组，表示可以使用任意用户向HDFS中增加数据，调试时使用，方便调试--&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">property</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">name</span>&gt;</span>hadoop.proxyuser.root.hosts<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">value</span>&gt;</span>*<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">property</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">property</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>hadoop.proxyuser.root.groups<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>*<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">property</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>hdfs-site.xml 增加内容</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 指定HDFS副本的数量，伪分布指定为1 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.replication<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>1<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">property</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 关闭HDFS的权限控制，使任意用户可以操作，开发时使用，方便本地调试MAPREDUCE--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.permissions<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">value</span>&gt;</span>false<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></div></pre></td></tr></table></figure>
 </li>
 </ol>
 
@@ -428,9 +515,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag"># hexo</a>
+            <a href="/tags/hadoop/" rel="tag"># hadoop</a>
           
-            <a href="/tags/githubpage/" rel="tag"># githubpage</a>
+            <a href="/tags/bigdata/" rel="tag"># bigdata</a>
+          
+            <a href="/tags/大数据/" rel="tag"># 大数据</a>
           
         </div>
       
@@ -477,8 +566,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/03/hexo+github安装配置/"
-           data-title="hexo+githubpage安装配置" data-url="http://wenfanchao.win/2017/02/03/hexo+github安装配置/">
+      <div class="ds-thread" data-thread-key="2017/02/06/hadoop环境搭建/"
+           data-title="hadoop环境搭建" data-url="http://wenfanchao.win/2017/02/06/hadoop环境搭建/">
       </div>
     
   </div>
@@ -525,7 +614,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -543,7 +632,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -609,7 +698,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#githubpage"><span class="nav-number">1.</span> <span class="nav-text">githubpage</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#githubpage真的是个好项目，为我们广大屌丝解决了很多问题"><span class="nav-number">1.1.</span> <span class="nav-text">githubpage真的是个好项目，为我们广大屌丝解决了很多问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo"><span class="nav-number">2.</span> <span class="nav-text">hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo也没啥说的官网巨详细基本就是照着做就可以"><span class="nav-number">2.1.</span> <span class="nav-text">hexo也没啥说的官网巨详细基本就是照着做就可以</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#themes"><span class="nav-number">2.2.</span> <span class="nav-text">themes</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#next"><span class="nav-number">2.2.1.</span> <span class="nav-text">next</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#环境准备"><span class="nav-number">1.1.</span> <span class="nav-text">环境准备</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境搭建"><span class="nav-number">2.</span> <span class="nav-text">环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#伪分布式环境搭建"><span class="nav-number">2.1.</span> <span class="nav-text">伪分布式环境搭建</span></a></li></ol></li></ol></div>
             
 
           </div>

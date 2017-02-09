@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="hexo,githubpage," />
+  <meta name="keywords" content="bigdata,大数据,sqoop," />
 
 
 
@@ -84,16 +84,18 @@
 
 
 
-<meta name="description" content="最近终于用hexo+githubpage把个人博客建立了，中间遇到不少的坑，记下来省的再犯。">
+<meta name="description" content="sqoop介绍Sqoop(发音：skup)是一款开源的工具，主要用于在Hadoop(Hive)与传统的数据库(mysql、postgresql…)间进行数据的传递，可以将一个关系型数据库（例如 ： MySQL ,Oracle ,Postgres等）中的数据导进到Hadoop的HDFS中，也可以将HDFS的数据导进到关系型数据库中。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo+githubpage安装配置">
-<meta property="og:url" content="http://wenfanchao.win/2017/02/03/hexo+github安装配置/index.html">
+<meta property="og:title" content="sqoop安装配置使用">
+<meta property="og:url" content="http://wenfanchao.win/2017/02/07/sqoop安装配置使用/index.html">
 <meta property="og:site_name" content="温凡超的blog">
-<meta property="og:description" content="最近终于用hexo+githubpage把个人博客建立了，中间遇到不少的坑，记下来省的再犯。">
-<meta property="og:updated_time" content="2017-02-06T01:19:33.767Z">
+<meta property="og:description" content="sqoop介绍Sqoop(发音：skup)是一款开源的工具，主要用于在Hadoop(Hive)与传统的数据库(mysql、postgresql…)间进行数据的传递，可以将一个关系型数据库（例如 ： MySQL ,Oracle ,Postgres等）中的数据导进到Hadoop的HDFS中，也可以将HDFS的数据导进到关系型数据库中。">
+<meta property="og:image" content="http://2xbbhjxc6wk3v21p62t8n4d4.wpengine.netdna-cdn.com/wp-content/uploads/2015/03/sqoop-illustration.jpeg">
+<meta property="og:updated_time" content="2017-02-08T06:40:45.122Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo+githubpage安装配置">
-<meta name="twitter:description" content="最近终于用hexo+githubpage把个人博客建立了，中间遇到不少的坑，记下来省的再犯。">
+<meta name="twitter:title" content="sqoop安装配置使用">
+<meta name="twitter:description" content="sqoop介绍Sqoop(发音：skup)是一款开源的工具，主要用于在Hadoop(Hive)与传统的数据库(mysql、postgresql…)间进行数据的传递，可以将一个关系型数据库（例如 ： MySQL ,Oracle ,Postgres等）中的数据导进到Hadoop的HDFS中，也可以将HDFS的数据导进到关系型数据库中。">
+<meta name="twitter:image" content="http://2xbbhjxc6wk3v21p62t8n4d4.wpengine.netdna-cdn.com/wp-content/uploads/2015/03/sqoop-illustration.jpeg">
 
 
 
@@ -121,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://wenfanchao.win/2017/02/03/hexo+github安装配置/"/>
+  <link rel="canonical" href="http://wenfanchao.win/2017/02/07/sqoop安装配置使用/"/>
 
 
 
 
 
-  <title> hexo+githubpage安装配置 | 温凡超的blog </title>
+  <title> sqoop安装配置使用 | 温凡超的blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -283,7 +285,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://wenfanchao.win/2017/02/03/hexo+github安装配置/">
+  <link itemprop="mainEntityOfPage" href="http://wenfanchao.win/2017/02/07/sqoop安装配置使用/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Wen fanchao">
@@ -307,7 +309,7 @@
             
             
               
-                hexo+githubpage安装配置
+                sqoop安装配置使用
               
             
           </h1>
@@ -322,8 +324,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-03T00:00:00+08:00">
-                2017-02-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-07T16:36:38+08:00">
+                2017-02-07
               </time>
             
 
@@ -363,8 +365,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/03/hexo+github安装配置/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/03/hexo+github安装配置/" itemprop="commentCount"></span>
+                <a href="/2017/02/07/sqoop安装配置使用/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/07/sqoop安装配置使用/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -390,21 +392,123 @@
       
 
       
-        <p>最近终于用hexo+githubpage把个人博客建立了，中间遇到不少的坑，记下来省的再犯。<br><a id="more"></a></p>
-<h2 id="githubpage"><a href="#githubpage" class="headerlink" title="githubpage"></a>githubpage</h2><h3 id="githubpage真的是个好项目，为我们广大屌丝解决了很多问题"><a href="#githubpage真的是个好项目，为我们广大屌丝解决了很多问题" class="headerlink" title="githubpage真的是个好项目，为我们广大屌丝解决了很多问题"></a>githubpage真的是个好项目，为我们广大屌丝解决了很多问题</h3><p>具体的不想详细介绍不管是度娘还是谷哥都是一大堆。就给个地址: <strong><a href="https://pages.github.com" target="_blank" rel="external">githubpage</a></strong></p>
-<h2 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h2><h3 id="hexo也没啥说的官网巨详细基本就是照着做就可以"><a href="#hexo也没啥说的官网巨详细基本就是照着做就可以" class="headerlink" title="hexo也没啥说的官网巨详细基本就是照着做就可以"></a>hexo也没啥说的官网巨详细基本就是照着做就可以</h3><p>地址:<br><strong><a href="https://hexo.io" target="_blank" rel="external">hexo</a></strong></p>
-<h3 id="themes"><a href="#themes" class="headerlink" title="themes"></a>themes</h3><p>hexo的社区很活跃提供的样式也很多这里选择了 <strong><a href="http://theme-next.iissnan.com" target="_blank" rel="external">next</a></strong> 这个被加星最多的样式，感觉还是很不错的该有的功能一应俱全</p>
-<h4 id="next"><a href="#next" class="headerlink" title="next"></a>next</h4><p>next 主题功能全面，这里我只把个人修改的地方做个介绍</p>
-<ol>
-<li>我修改了主题里的footer模板，原因是我对HEXO强力驱动和next主题支持这个标签实在是无爱了<br><br>footer模板位置：themes\next\layout_partials\footer.swig<br><br>模板很容易看懂，修改自己需要的内容就可以了。<br><br>ps:注意里面变量的值是从你设置的对应语言的YML中获取的，我设置的简体中文。文件位置在themes/next/languages/zh-Hans.yml</li>
-<li>next的标签页面我不太喜欢，或者说是hexo的tagcloud样子我觉得都不是太爱。所以修改了样式，参考了<a href="http://wzpan.github.io/hexo-theme-freemind/" target="_blank" rel="external">freemind</a>的标签样式</li>
-<li><p>修改模板 themes\next\page.swig <br><br>替换了原有的标签生成修改为自定的 div与样式</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"posts"</span> <span class="attr">class</span>=<span class="string">"posts-expand"</span>&gt;</span></div><div class="line">&#123;% include '_partials/page-header.swig' %&#125;</div><div class="line">  &#123;# tagcloud page support #&#125;</div><div class="line">  &#123;% if page.type === "tags" %&#125;</div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tag-cloud"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tag-cloud-title"</span>&gt;</span></div><div class="line">          &#123;&#123; _p('counter.tag_cloud', site.tags.length) &#125;&#125;</div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"widget"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"tag_box inline list-unstyled"</span>&gt;</span></div><div class="line">        &#123;% for item in site.tags %&#125;</div><div class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&#123;&#123;config.root&#125;&#125;&#123;&#123;item.path&#125;&#125;"</span>&gt;</span>&#123;&#123;item.name&#125;&#125;<span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123;item.posts.length&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">        &#123;% endfor %&#125;</div><div class="line">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>修改样式 themes\next\source\css_common\components\post\post-tags.styl<br>中增加</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.widget</span> &#123;</div><div class="line">  <span class="attribute">padding-bottom</span>: <span class="number">25px</span>;</div><div class="line">  <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#e0e0e0</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.tag_box</span> &#123;</div><div class="line">  <span class="attribute">margin</span>:<span class="number">0</span>;</div><div class="line">  <span class="attribute">overflow</span>:hidden;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.tag_box</span> <span class="selector-tag">li</span> &#123;</div><div class="line">  <span class="attribute">line-height</span>:<span class="number">28px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.tag_box</span> <span class="selector-tag">li</span> <span class="selector-tag">i</span> &#123;</div><div class="line">  <span class="attribute">opacity</span>:<span class="number">0.9</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.tag_box</span><span class="selector-class">.inline</span> <span class="selector-tag">li</span> &#123;</div><div class="line">  <span class="attribute">float</span>:left;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.tag_box</span> <span class="selector-tag">a</span> &#123;</div><div class="line">  <span class="attribute">padding</span>: <span class="number">2px</span> <span class="number">6px</span>;</div><div class="line">  <span class="attribute">margin</span>: <span class="number">2px</span>;</div><div class="line">  <span class="attribute">background</span>: <span class="number">#e5e5e5</span>;</div><div class="line">  <span class="attribute">color</span>:<span class="number">#555</span>;</div><div class="line">  <span class="attribute">border-radius</span>: <span class="number">3px</span>;</div><div class="line">  <span class="attribute">text-decoration</span>:none;</div><div class="line">  <span class="attribute">border</span>:<span class="number">1px</span> dashed <span class="number">#bbb</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.tag_box</span> <span class="selector-tag">a</span> <span class="selector-tag">span</span>&#123;</div><div class="line">  <span class="attribute">vertical-align</span>:super;</div><div class="line">  <span class="attribute">font-size</span>:<span class="number">0.8em</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.tag_box</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</div><div class="line">  <span class="attribute">background-color</span>:<span class="number">#397bdd</span>;</div><div class="line">  <span class="attribute">color</span>:<span class="number">#FFF</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.tag_box</span> <span class="selector-tag">a</span><span class="selector-class">.active</span> &#123;</div><div class="line">  <span class="attribute">background</span>:<span class="number">#57A957</span>;</div><div class="line">  <span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#4C964D</span>;</div><div class="line">  <span class="attribute">color</span>:<span class="number">#FFF</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ol>
+        <h2 id="sqoop介绍"><a href="#sqoop介绍" class="headerlink" title="sqoop介绍"></a>sqoop介绍</h2><p><a href="http://sqoop.apache.org/" target="_blank" rel="external">Sqoop</a>(发音：skup)是一款开源的工具，主要用于在Hadoop(Hive)与传统的数据库(mysql、postgresql…)间进行数据的传递，可以将一个关系型数据库（例如 ： MySQL ,Oracle ,Postgres等）中的数据导进到Hadoop的HDFS中，也可以将HDFS的数据导进到关系型数据库中。<br><img src="http://2xbbhjxc6wk3v21p62t8n4d4.wpengine.netdna-cdn.com/wp-content/uploads/2015/03/sqoop-illustration.jpeg" alt="sqoop"><br><a id="more"></a></p>
+<h2 id="sqoop下载，安装"><a href="#sqoop下载，安装" class="headerlink" title="sqoop下载，安装"></a>sqoop下载，安装</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a href="http://mirror.bit.edu.cn/apache/sqoop/1.4.6/sqoop-1.4.6.bin__hadoop-2.0.4-alpha.tar.gz" target="_blank" rel="external">下载地址</a></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>下载好后解压文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ tar -zxvf sqoop-1.4.6.bin__hadoop-2.0.4-alpha.tar.gz -C usr/sqoop</div></pre></td></tr></table></figure></p>
+<h2 id="sqoop配置"><a href="#sqoop配置" class="headerlink" title="sqoop配置"></a>sqoop配置</h2><p>修改 $sqoop_home/conf 下的模板文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mv sqoop-env-template.cmd sqoop-env.sh</div></pre></td></tr></table></figure></p>
+<p>增加<code>export HADOOP_COMMON_HOME=/etc/hadoop/hadoop-2.6.0</code></p>
+<h2 id="sqoop导入导出语句"><a href="#sqoop导入导出语句" class="headerlink" title="sqoop导入导出语句"></a>sqoop导入导出语句</h2><h3 id="从数据库导入到HDFS"><a href="#从数据库导入到HDFS" class="headerlink" title="从数据库导入到HDFS"></a>从数据库导入到HDFS</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sqoop import --connect jdbc:mysql://117.37.36.199:3306/<span class="built_in">log</span> --username root --password root --table user_dimension --driver com.mysql.jdbc.Driver --m 10 --target-dir /warehouse/user_dimension</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>–append</td>
+<td>将数据追加到hdfs中已经存在的dataset中。使用该参数，sqoop将把数据先导入到一个临时目录中，然后重新给文件命名到一个正式的目录中，以避免和该目录中已存在的文件重名。</td>
+</tr>
+<tr>
+<td>–as-avrodatafile</td>
+<td>将数据导入到一个Avro数据文件中</td>
+</tr>
+<tr>
+<td>–as-sequencefile</td>
+<td>将数据导入到一个sequence文件中</td>
+</tr>
+<tr>
+<td>–as-textfile</td>
+<td>将数据导入到一个普通文本文件中，生成该文本文件后，可以在hive中通过sql语句查询出结果。</td>
+</tr>
+<tr>
+<td>–boundary-query <statement></statement></td>
+<td>边界查询，也就是在导入前先通过SQL查询得到一个结果集，然后导入的数据就是该结果集内的数据，格式如：–boundary-query ‘select id,creationdate from person where id = 3’，表示导入的数据为id=3的记录，或者select min(<split-by>), max(<split-by>) from <table name="">，注意查询的字段中不能有数据类型为字符串的字段，否则会报错：java.sql.SQLException: Invalid value for getLong() 目前问题原因还未知</table></split-by></split-by></td>
+</tr>
+<tr>
+<td>–columns<col,col,col…></col,col,col…></td>
+<td>指定要导入的字段值，格式如：–columns id,username</td>
+</tr>
+<tr>
+<td>–direct</td>
+<td>直接导入模式，使用的是关系数据库自带的导入导出工具。官网上是说这样导入会更快</td>
+</tr>
+<tr>
+<td>–direct-split-size</td>
+<td>在使用上面direct直接导入的基础上，对导入的流按字节数分块，特别是使用直连模式从PostgreSQL导入数据的时候，可以将一个到达设定大小的文件分为几个独立的文件。</td>
+</tr>
+<tr>
+<td>–inline-lob-limit</td>
+<td>设定大对象数据类型的最大值</td>
+</tr>
+<tr>
+<td>-m,–num-mappers</td>
+<td>启动N个map来并行导入数据，默认是4个，最好不要将数字设置为高于集群的节点数</td>
+</tr>
+<tr>
+<td>–query，-e<statement></statement></td>
+<td>从查询结果中导入数据，该参数使用时必须指定–target-dir、–hive-table，在查询语句中一定要有where条件且在where条件中需要包含$CONDITIONS，示例：–query ‘select * from person where $CONDITIONS ‘ –target-dir</td>
+</tr>
+</tbody>
+</table>
+<p>/user/hive/warehouse/person –hive-table person</p>
+<p>–split-by<column-name>    |表的列名，用来切分工作单元，一般后面跟主键ID<br>–table <table-name>    |关系数据库表名，数据从该表中获取<br>–target-dir <dir>    |指定hdfs路径<br>–warehouse-dir <dir>    |与–target-dir不能同时使用，指定数据导入的存放目录，适用于hdfs导入，不适合导入hive目录<br>–where    从关系数据库导入数据时的查询条件，示例：–where ‘id = 2’<br>-z,–compress    |压缩参数，默认情况下数据是没被压缩的，通过该参数可以使用gzip压缩算法对数据进行压缩，适用于SequenceFile, text文本文件, 和Avro文件<br>–compression-codec    |Hadoop压缩编码，默认是gzip<br>–null-string <null-string>    |可选参数，如果没有指定，则字符串null将被使用<br>–null-non-string<null-string>    |可选参数，如果没有指定，则字符串null将被使用</null-string></null-string></dir></dir></table-name></column-name></p>
+<h3 id="从HDFS导入数据库"><a href="#从HDFS导入数据库" class="headerlink" title="从HDFS导入数据库"></a>从HDFS导入数据库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sqoop  <span class="built_in">export</span> --table WFC_WEATHER  -connect <span class="string">"jdbc:mysql://117.37.36.199:3306/hadoopcg?useUnicode=true&amp;characterEncoding=UTF-8"</span>  --username root --password root     --export-dir /demos/part-r-00000  --input-fields-terminated-by <span class="string">','</span>  -m 10</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>–direct</td>
+<td>快速模式，利用了数据库的导入工具，如mysql的mysqlimport，可以比jdbc连接的方式更为高效的将数据导入到关系数据库中。</td>
+</tr>
+<tr>
+<td>–export-dir <dir></dir></td>
+<td>存放数据的HDFS的源目录</td>
+</tr>
+<tr>
+<td>-m,–num-mappers <n></n></td>
+<td>启动N个map来并行导入数据，默认是4个，最好不要将数字设置为高于集群的最大Map数</td>
+</tr>
+<tr>
+<td>–table <table-name></table-name></td>
+<td>要导入到的关系数据库表</td>
+</tr>
+<tr>
+<td>–update-key <col-name></col-name></td>
+<td>后面接条件列名，通过该参数，可以将关系数据库中已经存在的数据进行更新操作，类似于关系数据库中的update操作</td>
+</tr>
+<tr>
+<td>–update-mode <mode></mode></td>
+<td>更新模式，有两个值updateonly和默认的allowinsert，该参数只能是在关系数据表里不存在要导入的记录时才能使用，比如要导入的hdfs中有一条id=1的记录，如果在表里已经有一条记录id=2，那么更新会失败。</td>
+</tr>
+<tr>
+<td>–input-null-string <null-string></null-string></td>
+<td>可选参数，如果没有指定，则字符串null将被使用</td>
+</tr>
+<tr>
+<td>–input-null-non-string <null-string></null-string></td>
+<td>可选参数，如果没有指定，则字符串null将被使用</td>
+</tr>
+<tr>
+<td>–staging-table <staging-table-name></staging-table-name></td>
+<td>该参数是用来保证在数据导入关系数据库表的过程中事务安全性的，因为在导入的过程中可能会有多个事务，那么一个事务失败会影响到其它事务，比如导入的数据会出现错误或出现重复的记录等等情况，那么通过该参数可以避免这种情况。创建一个与导入目标表同样的数据结构，保留该表为空在运行数据导入前，所有事务会将结果先存放在该表中，然后最后由该表通过一次事务将结果写入到目标表中。</td>
+</tr>
+<tr>
+<td>–clear-staging-table</td>
+<td>如果该staging-table非空，则通过该参数可以在运行导入前清除staging-table里的数据。</td>
+</tr>
+<tr>
+<td>–batch</td>
+<td>该模式用于执行基本语句（暂时还不太清楚含义）</td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
@@ -428,9 +532,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag"># hexo</a>
+            <a href="/tags/bigdata/" rel="tag"># bigdata</a>
           
-            <a href="/tags/githubpage/" rel="tag"># githubpage</a>
+            <a href="/tags/大数据/" rel="tag"># 大数据</a>
+          
+            <a href="/tags/sqoop/" rel="tag"># sqoop</a>
           
         </div>
       
@@ -439,8 +545,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/03/CNAME配置/" rel="next" title="github CNAME 设置">
-                <i class="fa fa-chevron-left"></i> github CNAME 设置
+              <a href="/2017/02/06/hadoop2.6.0安装/" rel="next" title="hadoop环境搭建-hadoop2.6.0安装配置，及环境概述">
+                <i class="fa fa-chevron-left"></i> hadoop环境搭建-hadoop2.6.0安装配置，及环境概述
               </a>
             
           </div>
@@ -449,8 +555,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/02/06/ShadowSocks（影梭）/" rel="prev" title="ShadowSocks（影梭）">
-                ShadowSocks（影梭） <i class="fa fa-chevron-right"></i>
+              <a href="/2017/02/08/flume安装配置使用/" rel="prev" title="flume安装配置使用">
+                flume安装配置使用 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -477,8 +583,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/03/hexo+github安装配置/"
-           data-title="hexo+githubpage安装配置" data-url="http://wenfanchao.win/2017/02/03/hexo+github安装配置/">
+      <div class="ds-thread" data-thread-key="2017/02/07/sqoop安装配置使用/"
+           data-title="sqoop安装配置使用" data-url="http://wenfanchao.win/2017/02/07/sqoop安装配置使用/">
       </div>
     
   </div>
@@ -609,7 +715,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#githubpage"><span class="nav-number">1.</span> <span class="nav-text">githubpage</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#githubpage真的是个好项目，为我们广大屌丝解决了很多问题"><span class="nav-number">1.1.</span> <span class="nav-text">githubpage真的是个好项目，为我们广大屌丝解决了很多问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo"><span class="nav-number">2.</span> <span class="nav-text">hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo也没啥说的官网巨详细基本就是照着做就可以"><span class="nav-number">2.1.</span> <span class="nav-text">hexo也没啥说的官网巨详细基本就是照着做就可以</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#themes"><span class="nav-number">2.2.</span> <span class="nav-text">themes</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#next"><span class="nav-number">2.2.1.</span> <span class="nav-text">next</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#sqoop介绍"><span class="nav-number">1.</span> <span class="nav-text">sqoop介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sqoop下载，安装"><span class="nav-number">2.</span> <span class="nav-text">sqoop下载，安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载"><span class="nav-number">2.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">2.2.</span> <span class="nav-text">安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sqoop配置"><span class="nav-number">3.</span> <span class="nav-text">sqoop配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sqoop导入导出语句"><span class="nav-number">4.</span> <span class="nav-text">sqoop导入导出语句</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#从数据库导入到HDFS"><span class="nav-number">4.1.</span> <span class="nav-text">从数据库导入到HDFS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#从HDFS导入数据库"><span class="nav-number">4.2.</span> <span class="nav-text">从HDFS导入数据库</span></a></li></ol></li></ol></div>
             
 
           </div>
