@@ -1,0 +1,1134 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="KJdQQ0aDDDc_s_Ul4vSFgLkginShvrxa68ML3-Ky124" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="oracle," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="一些平时总结的网上看到的内容，没事可以瞧瞧1234567891011121314151617181920212223242526272829303132/*创建表空间时指定的文件夹必须存在*/drop user snym cascade/*第1步：创建临时表空间  */create temporary tablespace ices_temptempfile &apos;D:\app\wenfanchao\">
+<meta property="og:type" content="article">
+<meta property="og:title" content="oracle 常用命令">
+<meta property="og:url" content="http://wenfanchao.win/2017/12/18/oracle命令那些事/index.html">
+<meta property="og:site_name" content="温凡超的blog">
+<meta property="og:description" content="一些平时总结的网上看到的内容，没事可以瞧瞧1234567891011121314151617181920212223242526272829303132/*创建表空间时指定的文件夹必须存在*/drop user snym cascade/*第1步：创建临时表空间  */create temporary tablespace ices_temptempfile &apos;D:\app\wenfanchao\">
+<meta property="og:updated_time" content="2017-12-18T09:40:47.115Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="oracle 常用命令">
+<meta name="twitter:description" content="一些平时总结的网上看到的内容，没事可以瞧瞧1234567891011121314151617181920212223242526272829303132/*创建表空间时指定的文件夹必须存在*/drop user snym cascade/*第1步：创建临时表空间  */create temporary tablespace ices_temptempfile &apos;D:\app\wenfanchao\">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://wenfanchao.win/2017/12/18/oracle命令那些事/"/>
+
+
+
+
+
+  <title> oracle 常用命令 | 温凡超的blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">温凡超的blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle">待到秋来九月八，我花开时百花杀。 冲天香阵透长安，满城尽带黄金甲。</p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://wenfanchao.win/2017/12/18/oracle命令那些事/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Wen fanchao">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/uploads/avatar.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="温凡超的blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="温凡超的blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                oracle 常用命令
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-18T00:00:00+08:00">
+                2017-12-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/12/18/oracle命令那些事/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/12/18/oracle命令那些事/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>一些平时总结的网上看到的内容，没事可以瞧瞧<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*创建表空间时指定的文件夹必须存在*/</span></div><div class="line"><span class="keyword">drop</span> <span class="keyword">user</span> snym <span class="keyword">cascade</span></div><div class="line"><span class="comment">/*第1步：创建临时表空间  */</span></div><div class="line"><span class="keyword">create</span> <span class="keyword">temporary</span> <span class="keyword">tablespace</span> ices_temp</div><div class="line">tempfile <span class="string">'D:\app\wenfanchao\oradata\oracle11g\ices_temp.dbf'</span></div><div class="line"><span class="keyword">size</span> <span class="number">50</span>m  </div><div class="line"><span class="keyword">autoextend</span> <span class="keyword">on</span>  </div><div class="line"><span class="keyword">next</span> <span class="number">50</span>m <span class="keyword">maxsize</span> <span class="number">20480</span>m  </div><div class="line"><span class="keyword">extent</span> <span class="keyword">management</span> <span class="keyword">local</span>;  </div><div class="line"></div><div class="line"><span class="comment">/*第2步：创建数据表空间  */</span></div><div class="line"><span class="keyword">create</span> <span class="keyword">tablespace</span> ices_data  </div><div class="line"><span class="keyword">logging</span>  </div><div class="line"><span class="keyword">datafile</span> <span class="string">'D:\app\wenfanchao\oradata\oracle11g\ices_data.dbf'</span></div><div class="line"><span class="keyword">size</span> <span class="number">50</span>m  </div><div class="line"><span class="keyword">autoextend</span> <span class="keyword">on</span>  </div><div class="line"><span class="keyword">next</span> <span class="number">50</span>m <span class="keyword">maxsize</span> <span class="number">20480</span>m  </div><div class="line"><span class="keyword">extent</span> <span class="keyword">management</span> <span class="keyword">local</span>;  </div><div class="line"></div><div class="line"><span class="comment">/*第3步：创建用户并指定表空间  */</span></div><div class="line"><span class="keyword">create</span> <span class="keyword">user</span> ices <span class="keyword">identified</span> <span class="keyword">by</span> <span class="number">111</span></div><div class="line"><span class="keyword">default</span> <span class="keyword">tablespace</span> ices_data</div><div class="line"><span class="keyword">temporary</span> <span class="keyword">tablespace</span> ices_temp</div><div class="line"><span class="comment">/*或使用默认表空间*/</span></div><div class="line"><span class="comment">/*default tablespace users</span></div><div class="line">temporary tablespace temp*/</div><div class="line"><span class="comment">/*使用表空间配额无限制*/</span></div><div class="line"><span class="keyword">quota</span> <span class="keyword">unlimited</span> <span class="keyword">on</span> ices_data;</div><div class="line"></div><div class="line"><span class="comment">/*第4步：给用户授予权限*/</span></div><div class="line"><span class="keyword">grant</span> <span class="keyword">connect</span>,<span class="keyword">resource</span>,dba <span class="keyword">to</span> ices;</div><div class="line"><span class="keyword">grant</span> <span class="keyword">execute</span> <span class="keyword">on</span> dbms_pipe <span class="keyword">to</span> ices;</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line">导出</div><div class="line">exp ices/111@ICES file=d:\2012-7-15b.dmp full=y</div><div class="line">exp icesdb/icesdb@ICES2 file=d:\2012-7-6.dmp full=y</div><div class="line"></div><div class="line">查询锁表</div><div class="line"><span class="keyword">SELECT</span> <span class="comment">/*+ rule */</span> s.username,</div><div class="line"><span class="keyword">decode</span>(l.type,<span class="string">'TM'</span>,<span class="string">'TABLE LOCK'</span>,</div><div class="line"><span class="string">'TX'</span>,<span class="string">'ROW LOCK'</span>,</div><div class="line"><span class="literal">NULL</span>) LOCK_LEVEL,</div><div class="line"><span class="keyword">decode</span>(l.LMODE,<span class="number">1</span>,<span class="string">'空'</span>,<span class="number">2</span>,<span class="string">'行级共享锁，其他对象只能查询这些数据行'</span>,<span class="number">3</span>,<span class="string">'行级排它锁，在提交前不允许做DML操作'</span>,<span class="number">4</span>,<span class="string">'共享锁'</span>,<span class="number">5</span>,<span class="string">'共享行级排它锁'</span>,<span class="number">6</span>,<span class="string">'排它锁'</span>),</div><div class="line">o.owner,o.object_name,o.object_type,</div><div class="line">s.sid,s.serial#,s.terminal,s.machine,s.program,s.osuser,s.SQL_ADDRESS,s.SQL_HASH_VALUE</div><div class="line"><span class="keyword">FROM</span> v$<span class="keyword">session</span> s,v$<span class="keyword">lock</span> l,dba_objects o</div><div class="line"><span class="keyword">WHERE</span> l.sid = s.sid</div><div class="line"><span class="keyword">AND</span> l.id1 = o.object_id(+)</div><div class="line"><span class="keyword">AND</span> s.username <span class="keyword">is</span> <span class="keyword">NOT</span> <span class="literal">Null</span>    <span class="keyword">ORDER</span> <span class="keyword">BY</span> LOCK_LEVEL      </div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">--根据address 和 hash_value 查询对应语句</span></div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> v$<span class="keyword">sql</span> <span class="keyword">where</span> address = <span class="string">'000000055B9A2728'</span> <span class="keyword">and</span> hash_value = <span class="number">2183148849</span>;</div><div class="line"><span class="comment">--全语句</span></div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> v$sqltext <span class="keyword">where</span> address = <span class="string">'000000055B9A2728'</span> <span class="keyword">and</span> hash_value = <span class="number">2183148849</span>;</div><div class="line"><span class="comment">--快速</span></div><div class="line"><span class="keyword">select</span> s.sid,sql_text <span class="keyword">from</span> v$<span class="keyword">session</span> s,v$sqlarea a,v$locked_object b  <span class="keyword">where</span> s.sid=b.session_id <span class="keyword">and</span> s.PREV_SQL_ADDR=a.address</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">临时表被锁</div><div class="line"><span class="keyword">select</span> <span class="keyword">sid</span>,<span class="built_in">serial</span>#</div><div class="line"><span class="keyword">from</span> v$<span class="keyword">session</span></div><div class="line"><span class="keyword">where</span> <span class="keyword">sid</span>=(<span class="keyword">select</span> <span class="keyword">sid</span></div><div class="line">              <span class="keyword">from</span> v$<span class="keyword">lock</span>   </div><div class="line">             <span class="keyword">where</span> id1 <span class="keyword">in</span> (<span class="keyword">select</span> object_id</div><div class="line">                           <span class="keyword">from</span> user_objects   </div><div class="line">                          <span class="keyword">where</span> object_name=<span class="string">'TMP_REP_5'</span>));</div><div class="line"></div><div class="line"></div><div class="line">杀锁命令</div><div class="line"><span class="keyword">alter</span> <span class="keyword">system</span> <span class="keyword">kill</span> <span class="keyword">session</span> <span class="string">'sid,serial#'</span></div><div class="line"></div><div class="line">查看所有表空间位置</div><div class="line"><span class="keyword">select</span> <span class="keyword">name</span> <span class="keyword">from</span> v$<span class="keyword">datafile</span>;</div><div class="line"></div><div class="line">查看SQL性能</div><div class="line"><span class="keyword">SELECT</span> BUFFER_GETS <span class="comment">/*所有子游标运行这条语句导致的读内存次数*/</span> ,EXECUTIONS <span class="comment">/*所有子游标的执行这条语句次数*/</span> ,SQL_TEXT <span class="keyword">FROM</span> V$SQLAREA;</div><div class="line"></div><div class="line">查看消耗资源最多的SQL：</div><div class="line">Sql代码 <span class="keyword">SELECT</span> hash_value, executions, buffer_gets, disk_reads, parse_calls <span class="keyword">FROM</span> V$SQLAREA <span class="keyword">WHERE</span> buffer_gets &gt; <span class="number">10000000</span> <span class="keyword">OR</span> disk_reads &gt; <span class="number">1000000</span> <span class="keyword">ORDER</span> <span class="keyword">BY</span> buffer_gets + <span class="number">100</span> * disk_reads <span class="keyword">DESC</span>;</div><div class="line"></div><div class="line">选出最占用资源的查询</div><div class="line"></div><div class="line">Sql代码 <span class="keyword">select</span> b.username username,a.disk_reads <span class="keyword">reads</span>,a.executions exec, a.disk_reads/<span class="keyword">decode</span>(a.executions,<span class="number">0</span>,<span class="number">1</span>,a.executions) rds_exec_ratio, a.sql_text <span class="keyword">statement</span> <span class="keyword">from</span> v$sqlarea a,dba_users b <span class="keyword">where</span> a.parsing_user_id=b.user_id <span class="keyword">and</span> username = <span class="string">'SNYM'</span></div></pre></td></tr></table></figure>
+<p>–sqlplus<br>启动监听：lsnrctl start<br>查看监听：lsnrctl status<br>停止监听：lsnrctl stop<br>–登录</p>
+<h2 id="sqlplus-用户名-密码-监听名称-as-登录模式-normal-sysdba-sysoper"><a href="#sqlplus-用户名-密码-监听名称-as-登录模式-normal-sysdba-sysoper" class="headerlink" title="sqlplus 用户名/密码@监听名称 as 登录模式(normal/sysdba/sysoper)"></a>sqlplus 用户名/密码@监听名称 as 登录模式(normal/sysdba/sysoper)</h2><p>1启动SQL*PLUS不与数据库连接</p>
+<p>   SQLPLUS /NOLOG</p>
+<p>2、以SYSDBA角色与Oracle连接</p>
+<p>   CONNECT username/password AS SYSDBA</p>
+<p>3、启动实例</p>
+<p>   1&gt;、启动一个实例，装配和打开一个数据库</p>
+<pre><code>STARTUP;
+</code></pre><p>或</p>
+<pre><code>STARTUP PFILE=&apos;d:/oracle/admin/mydb/scripts/initMYDB.ora&apos;;
+</code></pre><p>   2&gt;、启动一个实例但不装配数据库</p>
+<pre><code>--典型应用为数据库创建
+
+STARTUP NOMOUNT;
+</code></pre><p>   3&gt;、启动一个实例，装配数据库但不打开</p>
+<pre><code>--该模式下允许你执行特定的维护操作，包括
+
+--重命名数据库、增删或重命名日志文件、启用和停用重做归档日志文件选项;
+
+--执行完整的数据库恢复
+
+STARTUP MOUNT;
+</code></pre><p>   4&gt;、在启动时限制一个数据库的存取</p>
+<pre><code>--该模式使管理员可用数据库，但一般操作员不可用，应用于
+
+--执行导入导出、执行SQL*loader的数据装载、临时阻止典型用户使用数据
+
+--升迁或升级
+
+--在正常模式下，有CREATE SESSION系统特权的用户可以连接到数据库
+
+--限制模式下，同时具有CREATE SESSION和RESTRICTED SESSION两个系统特权的用户
+
+--才可以存取数据
+
+STARTUP RESTRICT;
+
+--关闭限制模式
+
+ALTER SYSTEM DISABLE RESTRICTED SESSION;
+
+--将正在运行的正常模式改变为限制模式
+
+ALTER SYSTEM ENABLE RESTRICTED SESSION;
+</code></pre><p>   5&gt;、强制一个实例启动（用于启动时出现问题情况，少用，慎用！）</p>
+<pre><code>STARTUP FORCE;
+</code></pre><p>   6&gt;、启动实例，装配数据库和启动完全的介质恢复</p>
+<pre><code>STARTUP OPEN RECOVER;
+</code></pre><p>4、改变数据库可用性</p>
+<p>   1&gt;、装配数据库</p>
+<pre><code>ALTER DATABASE MOUNT;
+</code></pre><p>   2&gt;、打开数据库</p>
+<pre><code>ALTER DATABASE OPEN;
+</code></pre><p>   3&gt;、以只读或只写或读写方式打开数据库</p>
+<pre><code>ALTER DATABASE OPEN READ ONLY;
+
+ALTER DATABASE WRITE READ ONLY;
+
+ALTER DATABASE OPEN READ WRITE;
+</code></pre><p>&lt;二&gt;、ORACLE数据库关闭</p>
+<p>1、正常关闭</p>
+<p>   SHUTDOWN NORMAL；</p>
+<p>2、事务性关闭</p>
+<p>   –不许新连接，但等待现有的事务执行结束</p>
+<p>   SHUTDOWN TRANSACTIONAL；</p>
+<p>3、立即关闭</p>
+<p>   SHUTDOWN IMMEDIATE；</p>
+<p>4、强制关闭    </p>
+<p>   –该模式关闭下次启动时要进行实例恢复过程</p>
+<p>   SHUTDOWN ABORT；</p>
+<p>5、停顿数据库</p>
+<p>   –该状态下只允许DBA会话，不允许新的非DBA连接建立</p>
+<p>   ALTER SYSTEM QUIESCE RESTRICTED;</p>
+<p>   –取消停顿</p>
+<p>   ALTER SYSTEM UNQUIESCE;</p>
+<p>   –查看实例的停顿状态</p>
+<p>   –列ACTIVE_STATE说明：NORMAL未停顿QUIESCING正在停顿，但仍有非DBA会话</p>
+<p>   –QUIESCED已停顿</p>
+<p>   select ACTIVE_STATE from V$INSTANCE;</p>
+<p>6、挂起数据库</p>
+<p>   –暂停对数据文件和控制文件的所有IO，可以在无IO干扰情况先进行备份</p>
+<p>   –挂起命令可以挂起数据库而并不指定一个实例</p>
+<p>   ALTER SYSTEM SUSPEND;</p>
+<p>   –恢复到非挂起状态</p>
+<p>   ALTER SYSTEM RESUME;   </p>
+<p>   –查看挂起状态</p>
+<p>   SELECT DATABASE_STATUS FROM V$INSTANCE;</p>
+<p>–</p>
+<p>11G的DMP 导入 10G<br>一、在11g服务器上，使用expdp命令备份数据</p>
+<p>11g 导出语句：EXPDP USERID=’facial/facial@orcl as sysdba’ schemas=facial directory=DATA_PUMP_DIR dumpfile=aa.dmp logfile=aa.log version=10.2.0.1.0</p>
+<p>其中，我的用户名是facial，密码是facial，数据库sid是orcl，schemas要导出的用户名是facial，要导入到 10.2.0.1.0版本的Oracle数据库中去。aa.dmp和aa.log将会在11g的dpdump目录中生成，例如我的11g装在了E盘下面，于是aa.dmp将会在E:\app\Administrator\admin\orcl\dpdump目录下被生成。</p>
+<p>二、在10g服务器上，使用impdp命令恢复数据</p>
+<p>准备工作：1.建库2.建表空间3.建用户并授权4.将aa.dmp拷贝到10g的dpdump目录下</p>
+<p>10g 导入语句：IMPDP USERID=’facial/facial@orcl as sysdba’ schemas=facial directory=DATA_PUMP_DIR dumpfile=aa.dmp logfile=aa.log version=10.2.0.1.0<br>–给用户赋予创建临时表权限<br>grant create any table to <user></user></p>
+<p>– 查询某个时间段的 SCN 系统快照号<br>select timestamp_to_scn(to_timestamp(‘2012-07-19 15:00:00’,’YYYY-MM-DD HH24:MI:SS’)) from dual;<br>–根据系统快照号查询在该 SCN 号下 查询表对应的 数据集如<br>select <em> from text1(表名) as of scn 25107913(SCN号);<br>–通过 Insert into 语句还原表<br>insert into text1(表名) select </em> from select * from text1(表名) as of scn 25107913(SCN号);</p>
+<p>select dbms_flashback.get_system_change_number from dual;</p>
+<p>就是oracle的会话数超出了限制，一般都是由于多次connect建立多个连接会话引起的，最后导致oracle无法响应新的请求，从而出现ora-12516错误。</p>
+<p>相关解决办法：</p>
+<p>1.查看当前连接进程数</p>
+<p>SQL&gt;select count(*) from v$process;</p>
+<p>2.查看连接数上限</p>
+<p>SQL&gt;select value from v$parameter where name = ‘processes’;</p>
+<p>3.查看当前数据库的processes设置</p>
+<p>SQL&gt; show parameter processes</p>
+<p>NAME                                 TYPE        VALUE<br>db_writer_processes                  integer     1<br>gcs_server_processes                 integer     0<br>job_queue_processes                  integer     10<br>log_archive_max_processes            integer     2<br>processes                            integer     150</p>
+<p>SQL&gt; show parameter sessions<br>NAME                                 TYPE        VALUE<br>java_soft_sessionspace_limit         integer     0l<br>icense_max_sessions                 integer     0<br>license_sessions_warning             integer     0<br>logmnr_max_persistent_sessions       integer     1<br>sessions                             integer     170<br>shared_server_sessions               integer</p>
+<p>4.只要会话连接数超过上面的process数150或者sessions数170，再来一个的会话进程，就会产生12516错误。因此可以修改一下该值：</p>
+<p>sessions=1.1*processes+5;//这个是sessions值和processes值的关系，最好按照这样做，</p>
+<p>因此如果要将processes数设置为500，则sessions数必须为1.1*500+5=555</p>
+<p>SQL&gt; alter system set processes=500 scope=spfile;<br>系统已更改。<br>SQL&gt; alter system set sessions=555 scope=spfile;<br>系统已更改。</p>
+<p>1。会话特有的临时表<br>CREATE GLOBAL TEMPORARY <table_name> (<column specification="">)<br>ON COMMIT PRESERVE ROWS；<br>2。事务特有的临时表<br>CREATE GLOBAL TEMPORARY <table_name> (<column specification="">)<br>ON COMMIT DELETE ROWS；<br>CREATE GLOBAL TEMPORARY TABLE MyTempTable</column></table_name></column></table_name></p>
+<p>select <em> from DBA_USERS;<br>SELECT </em> FROM ALL_USERS;</p>
+<hr>
+<p>create temporary tablespace impr_temp tempfile  ‘+ASM_DATA/snym/tempfile/impr_temp.dbf’ size 10m autoextend on next 10m maxsize  unlimited;</p>
+<p>create tablespace impr_idata logging datafile  ‘+ASM_DATA/snym/datafile/impr_idata.dbf’ size 20m autoextend on next 20m maxsize  unlimited;</p>
+<p>create user impr identified by impr123456 default tablespace impr_idata  temporary tablespace impr_temp;<br>grant connect,resource,dba to impr;</p>
+<p>create temporary tablespace snym_temp tempfile  ‘+ASM_DATA/snym/tempfile/snym_temp.dbf’ size 10m autoextend on next 10m maxsize  unlimited;</p>
+<p>create tablespace snym_idata logging datafile  ‘+ASM_DATA/snym/datafile/snym_idata.dbf’ size 20m autoextend on next 20m maxsize  unlimited;</p>
+<p>–创建数据链<br>create public database link DB63<br>  connect to 用户名 identified by “密码”<br>  using ‘(DESCRIPTION =<br>    (ADDRESS_LIST =<br>      (ADDRESS = (PROTOCOL = TCP)(HOST = 10.201.8.63)(PORT = 1521))<br>    )<br>    (CONNECT_DATA =<br>      (SERVICE_NAME = orcl)<br>    )<br>  )’;<br>–创建同义词<br>create public synonym test_syn for scott.test2@DB104</p>
+<p>—解决提示动态执行表不可访问<br>用SYS登录，授权给相应的用户，用下面的语句，<br>grant select on v_$statname to user;<br>自动统计功能可以关掉。<br>最后的这个，超时断开问题，可以设置USER_PROFILES里面看到的IDLE_TIME值，<br>首先查看你的当前用户的PROFILE是哪个，<br>select profile from dba_users where username=’SCOTT’ ;<br>假如是DEFAULT这个PROFILE，那么修改IDLE_TIME这个值<br>alter profile default limit idle_time unlimited ;<br>必要时创建新的PROFILE。<br>–实际应用中是不能对远程的表 使用递归语句的 但是可以通过使远程表与本地表产生笛卡尔积的方式变相解决使用递归语句</p>
+<p>——————————————————-oracle赋权——————————————<br>我们将通过介绍命令的方式，谈谈Oracle用户权限表的管理方法，希望对大家有所帮助。</p>
+<p>　　我们将从创建Oracle用户权限表开始谈起，然后讲解登陆等一般性动作，使大家对Oracle用户权限表有个深入的了解。</p>
+<p>　　一、创建</p>
+<p>　　sys;//系统管理员，拥有最高权限</p>
+<p>　　system;//本地管理员，次高权限</p>
+<p>　　scott;//普通用户，密码默认为tiger,默认未解锁</p>
+<p>　　sys;//系统管理员，拥有最高权限</p>
+<p>　　system;//本地管理员，次高权限</p>
+<p>　　scott;//普通用户，密码默认为tiger,默认未解锁</p>
+<p>　　二、登陆</p>
+<p>　　sqlplus / as sysdba;//登陆sys帐户</p>
+<p>　　sqlplus sys as sysdba;//同上</p>
+<p>　　sqlplus scott/tiger;//登陆普通用户scott</p>
+<p>　　sqlplus / as sysdba;//登陆sys帐户</p>
+<p>　　sqlplus sys as sysdba;//同上</p>
+<p>　　sqlplus scott/tiger;//登陆普通用户scott</p>
+<p>　　三、管理用户</p>
+<p>　　create user zhangsan;//在管理员帐户下，创建用户zhangsan</p>
+<p>　　alert user scott identified by tiger;//修改密码</p>
+<p>　　create user zhangsan;//在管理员帐户下，创建用户zhangsan</p>
+<p>　　alert user scott identified by tiger;//修改密码</p>
+<p>　　四，授予权限</p>
+<p>　　1、默认的普通用户scott默认未解锁，不能进行那个使用，新建的用户也没有任何权限，必须授予权限</p>
+<p>　　/<em>管理员授权</em>/</p>
+<p>　　grant create session to zhangsan;//授予zhangsan用户创建session的权限，即登陆权限</p>
+<p>　　grant unlimited session to zhangsan;//授予zhangsan用户使用表空间的权限</p>
+<p>　　grant create table to zhangsan;//授予创建表的权限</p>
+<p>　　grante drop table to zhangsan;//授予删除表的权限</p>
+<p>　　grant insert table to zhangsan;//插入表的权限</p>
+<p>　　grant update table to zhangsan;//修改表的权限</p>
+<p>　　grant all to public;//这条比较重要，授予所有权限(all)给所有用户(public)</p>
+<p>　　/<em>管理员授权</em>/</p>
+<p>　　grant create session to zhangsan;//授予zhangsan用户创建session的权限，即登陆权限</p>
+<p>　　grant unlimited session to zhangsan;//授予zhangsan用户使用表空间的权限</p>
+<p>　　grant create table to zhangsan;//授予创建表的权限</p>
+<p>　　grante drop table to zhangsan;//授予删除表的权限</p>
+<p>　　grant insert table to zhangsan;//插入表的权限</p>
+<p>　　grant update table to zhangsan;//修改表的权限</p>
+<p>　　grant all to public;//这条比较重要，授予所有权限(all)给所有用户(public)</p>
+<p>　　2、oralce对权限管理比较严谨，普通用户之间也是默认不能互相访问的，需要互相授权</p>
+<p>　　/<em>oralce对权限管理比较严谨，普通用户之间也是默认不能互相访问的</em>/</p>
+<p>　　grant select on tablename to zhangsan;//授予zhangsan用户查看指定表的权限</p>
+<p>　　grant drop on tablename to zhangsan;//授予删除表的权限</p>
+<p>　　grant insert on tablename to zhangsan;//授予插入的权限</p>
+<p>　　grant update on tablename to zhangsan;//授予修改表的权限</p>
+<p>　　grant insert(id) on tablename to zhangsan;</p>
+<p>　　grant update(id) on tablename to zhangsan;//授予对指定表特定字段的插入和修改权限，注意，只能是insert和update</p>
+<p>　　grant alert all table to zhangsan;//授予zhangsan用户alert任意表的权限</p>
+<p>　　/<em>oralce对权限管理比较严谨，普通用户之间也是默认不能互相访问的</em>/</p>
+<p>　　grant select on tablename to zhangsan;//授予zhangsan用户查看指定表的权限</p>
+<p>　　grant drop on tablename to zhangsan;//授予删除表的权限</p>
+<p>　　grant insert on tablename to zhangsan;//授予插入的权限</p>
+<p>　　grant update on tablename to zhangsan;//授予修改表的权限</p>
+<p>　　grant insert(id) on tablename to zhangsan;</p>
+<p>　　grant update(id) on tablename to zhangsan;//授予对指定表特定字段的插入和修改权限，注意，只能是insert和update</p>
+<p>　　grant alert all table to zhangsan;//授予zhangsan用户alert任意表的权限</p>
+<p>　　五、撤销权限</p>
+<p>　　基本语法同grant,关键字为revoke</p>
+<p>　　基本语法同grant,关键字为revoke</p>
+<p>　　六、查看权限</p>
+<p>　　select * from user_sys_privs;//查看当前用户所有权限</p>
+<p>　　select * from user_tab_privs;//查看所用用户对表的权限</p>
+<p>　　select * from user_sys_privs;//查看当前用户所有权限</p>
+<p>　　select * from user_tab_privs;//查看所用用户对表的权限</p>
+<p>　　七、操作表的用户的表</p>
+<p>　　/<em>需要在表名前加上用户名，如下</em>/</p>
+<p>　　select * from zhangsan.tablename</p>
+<p>　　/<em>需要在表名前加上用户名，如下</em>/</p>
+<p>　　select * from zhangsan.tablename</p>
+<p>　　八、权限传递</p>
+<p>　　即用户A将权限授予B，B可以将操作的权限再授予C，命令如下：</p>
+<p>　　grant alert table on tablename to zhangsan with admin option;//关键字 with admin option</p>
+<p>　　grant alert table on tablename to zhangsan with grant option;//关键字 with grant option效果和admin类似</p>
+<p>　　grant alert table on tablename to zhangsan with admin option;//关键字 with admin option</p>
+<p>　　grant alert table on tablename to zhangsan with grant option;//关键字 with grant option效果和admin类似</p>
+<p>　　九、角色</p>
+<p>　　角色即权限的集合，可以把一个角色授予给用户</p>
+<p>　　create role myrole;//创建角色</p>
+<p>　　grant create session to myrole;//将创建session的权限授予myrole</p>
+<p>　　grant myrole to zhangsan;//授予zhangsan用户myrole的角色</p>
+<p>　　drop role myrole;删除角色</p>
+<p>　　/<em>但是有些权限是不能授予给角色的，比如unlimited tablespace和any关键字</em>/<br>–建立JOB<br>declare<br> v_jobno number;<br> begin<br>   dbms_job.submit(v_jobno,’prc_fistone(1);’,sysdate,’sysdate+1’);<br>   dbms_output.put_line(‘号：’|| v_jobno);<br>   commit;<br> end;<br> –修改<br> begin<br>  sys.dbms_job.change(job =&gt; 23,<br>                      what =&gt; ‘prc_nextyear(1);’,<br>                      next_date =&gt; to_date(‘06-03-2013’, ‘dd-mm-yyyy’),<br>                      interval =&gt; ‘sysdate+1’);<br>  commit;</p>
+<h2 id="end"><a href="#end" class="headerlink" title="end;"></a>end;</h2><p>我们在确定应用程序性能的时候，更多地会关注其中SQL语句的执行情况。通常应用的性能瓶颈会在数据库这边，因此数据库的sql语句是我们优化的重点。</p>
+<p>要对sql语句进行优化，首先要知道应用程序执行了哪些SQL语句。下面我介绍三种方法来获得应用程序所执行的SQL语句。</p>
+<p>方法一：</p>
+<p>如果你采用的数据库是oracle的话，那么可以利用oracle本身的10046事件跟踪SQL语句。步骤如下：</p>
+<p>1、首先获得spid、sid、serial#，machine为你的机器名</p>
+<p>　　<br>　　SQL&gt; select b.spid,a.sid,a.serial#,<br>    a.machine from v$session a,v$process b where<br>    a.paddr = b.addr and a.machine=’yz’;<br>　　<br>　　SPID　　　　　　　　SID　　SERIAL#　MACHINE<br>　　<br>　　9497　　　　　　　　 49　　　 3406　　 yz</p>
+<p>　　<br>2、利用10046事件开始跟踪</p>
+<p>　　<br>　　SQL&gt;execute sys.dbms_system.set_ev(49, 3406,10046,1,’’);<br>　　PL/SQL procedure successfully completed.</p>
+<p>　　<br>3、这时候你可以运行应用程序，对于web 应用你就可以打开你认为性能比较差页面。</p>
+<p>4、如果你要查看这段时间执行了哪些sql语句，可以执行下面的语句结束跟踪:</p>
+<p>　　<br>　　SQL&gt;execute sys.dbms_system.set_ev(49,3406,10046,0,’’);<br>　　<br>　　PL/SQL procedure successfully completed.</p>
+<p>　　<br>5、SQL trace 工具会收集这个过程中执行的SQL的性能状态数据，记录到一个跟踪文件中.这个跟踪文件提供了许多有用的信息,例如解析次数.执行次数,CPU使用时间等。</p>
+<p>6、这时候你可以通过下面的语句获得产生的跟踪文件所在的目录:</p>
+<p>　</p>
+<p>　<br>　　SQL&gt; select value from v$parameter where name = ‘user_dump_dest’;<br>　　<br>　　VALUE<br>　　<br>　  /opt/oracle/admin/ocn/udump</p>
+<p>　　<br>7、在/opt/oracle/admin/ocn/udump下找到yzoracle_ora_9497.trc。9497是你当前应用的spid。</p>
+<p>8、注意yzoracle_ora_9497.trc是不可读的，我们需要执行oracle的tkprof命令，将yzoracle_ora_9497.trc转化为我们可读的文本文件。</p>
+<p>　</p>
+<p>　<br>　　tkprof　yzoracle_ora_9497.trc　yzoracle_ora_9497.sql</p>
+<p>　　</p>
+<h2 id="这样你就可以在yzoracle-ora-9497-sql文件中看到所有的sql语句执行次数-CPU使用时间等数据。"><a href="#这样你就可以在yzoracle-ora-9497-sql文件中看到所有的sql语句执行次数-CPU使用时间等数据。" class="headerlink" title="这样你就可以在yzoracle_ora_9497.sql文件中看到所有的sql语句执行次数,CPU使用时间等数据。"></a>这样你就可以在yzoracle_ora_9497.sql文件中看到所有的sql语句执行次数,CPU使用时间等数据。</h2><p>修改Oracle 11g账户过期时间</p>
+<p>开发过程中不需要限制账户的过期时间，所以需要进行一些设置。</p>
+<p>1 查看用户的proifle是哪个，一般是default：</p>
+<p>SELECT username,PROFILE FROM dba_users;</p>
+<p>2 查看指定概要文件（如default）的密码有效期设置：</p>
+<p>SELECT * FROM dba_profiles s WHERE s.profile=’DEFAULT’ AND resource_name=’PASSWORD_LIFE_TIME’;<br>  www.2cto.com<br>3 将密码有效期由默认的180天修改成“无限制”：</p>
+<p>ALTER PROFILE DEFAULT LIMIT PASSWORD_LIFE_TIME UNLIMITED;</p>
+<p>修改之后不需要重启动数据库，会立即生效。</p>
+<p>4 修改后，还没有被提示ORA-28002警告的帐户不会再碰到同样的提示；</p>
+<p>已经被提示的帐户必须再改一次密码，举例如下：</p>
+<p>$sqlplus / as sysdba</p>
+<p>sql&gt; alter user smsc identified by &lt;原来的密码&gt; —-不用换新密码</p>
+<p>oracle11g启动参数resource_limit无论设置为false还是true，密码有效期都是生效的，所以必须通过以上方式进行修改。以上的帐户名请根据实际使用的帐户名更改。</p>
+<p>—————–发现的问题—————-<br>oracle 不能删除没有主外键关系的视图数据<br>如 A,B两表 没有主外键关系则<br>delete from (select * from a,b where a.id = b.id)</p>
+<h2 id="会产生-ora-01752-错误"><a href="#会产生-ora-01752-错误" class="headerlink" title="会产生 ora-01752 错误"></a>会产生 ora-01752 错误</h2>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/oracle/" rel="tag"># oracle</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/18/oracle_scn/" rel="next" title="oracle 闪回查询">
+                <i class="fa fa-chevron-left"></i> oracle 闪回查询
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/18/ubuntu安装jdk8/" rel="prev" title="ubuntu安装jdk8">
+                ubuntu安装jdk8 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/12/18/oracle命令那些事/"
+           data-title="oracle 常用命令" data-url="http://wenfanchao.win/2017/12/18/oracle命令那些事/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="Wen fanchao" />
+          <p class="site-author-name" itemprop="name">Wen fanchao</p>
+          <p class="site-description motion-element" itemprop="description">待到秋来九月八，我花开时百花杀。 冲天香阵透长安，满城尽带黄金甲。</p>
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/wenfanchao" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/wenfanchao" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/wenfanchao1" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#sqlplus-用户名-密码-监听名称-as-登录模式-normal-sysdba-sysoper"><span class="nav-number">1.</span> <span class="nav-text">sqlplus 用户名/密码@监听名称 as 登录模式(normal/sysdba/sysoper)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#end"><span class="nav-number">2.</span> <span class="nav-text">end;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#这样你就可以在yzoracle-ora-9497-sql文件中看到所有的sql语句执行次数-CPU使用时间等数据。"><span class="nav-number">3.</span> <span class="nav-text">这样你就可以在yzoracle_ora_9497.sql文件中看到所有的sql语句执行次数,CPU使用时间等数据。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#会产生-ora-01752-错误"><span class="nav-number">4.</span> <span class="nav-text">会产生 ora-01752 错误</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-fighter-jet"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Wen fanchao</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://wenfanchao.win">Wenfanchao</a> 维护
+</div>
+
+<div class="theme-info">
+  博客 -
+  <a class="theme-link" href="http://wenfanchao.win">
+    Wen fanchao
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"wenfanchao"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
